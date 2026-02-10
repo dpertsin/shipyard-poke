@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account – Poke</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 560px;
+      width: 100%;
+    }
+
+    .icon {
+      width: 64px;
+      height: 64px;
+      background-color: #1c1c1e;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #8e8e93;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+
+    .card {
+      background-color: #1c1c1e;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    .card h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #8e8e93;
+      margin-bottom: 16px;
+    }
+
+    .step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .step:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-number {
+      width: 26px;
+      height: 26px;
+      background-color: #007aff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step-text {
+      font-size: 15px;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+
+    .step-text span {
+      color: #8e8e93;
+      display: block;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .email-button {
+      display: block;
+      background-color: #007aff;
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      transition: opacity 0.15s ease;
+    }
+
+    .email-button:hover {
+      opacity: 0.85;
+    }
+
+    .data-card {
+      background-color: #1c1c1e;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .data-card h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #8e8e93;
+      padding: 16px 20px 12px;
+    }
+
+    .data-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 20px;
+      border-top: 1px solid #2c2c2e;
+    }
+
+    .data-row .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .dot-red   { background-color: #ff3b30; }
+    .dot-gray  { background-color: #8e8e93; }
+
+    .data-row-text {
+      flex: 1;
+      font-size: 15px;
+      color: #ffffff;
+    }
+
+    .data-row-text span {
+      display: block;
+      font-size: 12px;
+      color: #8e8e93;
+      margin-top: 2px;
+    }
+
+    .data-row .badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .badge-deleted {
+      background-color: rgba(255, 59, 48, 0.15);
+      color: #ff3b30;
+    }
+
+    .badge-kept {
+      background-color: rgba(142, 142, 147, 0.15);
+      color: #8e8e93;
+    }
+
+    .note {
+      background-color: #1c1c1e;
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 13px;
+      color: #8e8e93;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .note strong {
+      color: #ffffff;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #48484a;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="icon">🔔</div>
+
+    <h1>Delete Your Account</h1>
+    <p class="subtitle">
+      Poke is a local-first app — your reminders live on your device. If you are a
+      Premium user with cloud sync enabled, your data is also stored in our servers
+      and must be removed manually.
+    </p>
+
+    <div class="card">
+      <h2>How to request deletion</h2>
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-text">
+          Send an email to <strong>dpertsin@gmail.com</strong>
+          <span>Use the subject line: "Delete my Poke account"</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-text">
+          Include the email address you signed up with
+          <span>This is the email linked to your Premium account</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-text">
+          We will confirm and complete deletion within 7 days
+          <span>You will receive a confirmation email once done</span>
+        </div>
+      </div>
+    </div>
+
+    <a class="email-button" href="mailto:dpertsin@gmail.com?subject=Delete%20my%20Poke%20account">
+      Email dpertsin@gmail.com
+    </a>
+
+    <div class="data-card">
+      <h2>What gets deleted</h2>
+
+      <div class="data-row">
+        <div class="dot dot-red"></div>
+        <div class="data-row-text">
+          Account credentials
+          <span>Your email and password from Supabase Auth</span>
+        </div>
+        <div class="badge badge-deleted">Deleted</div>
+      </div>
+
+      <div class="data-row">
+        <div class="dot dot-red"></div>
+        <div class="data-row-text">
+          Synced reminders, lists &amp; tags
+          <span>All cloud-synced data from our servers</span>
+        </div>
+        <div class="badge badge-deleted">Deleted</div>
+      </div>
+
+      <div class="data-row">
+        <div class="dot dot-gray"></div>
+        <div class="data-row-text">
+          Data on your device
+          <span>Local reminders remain unless you delete the app</span>
+        </div>
+        <div class="badge badge-kept">Stays on device</div>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Free tier users:</strong> If you have never signed up for a Premium account,
+      there is no server-side data associated with you. Simply delete the app to remove
+      all your data.
+    </div>
+
+    <div class="footer">Poke Reminders &nbsp;·&nbsp; dpertsin@gmail.com</div>
+
+  </div>
+</body>
+</html>
